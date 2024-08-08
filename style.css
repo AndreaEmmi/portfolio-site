@@ -275,6 +275,14 @@ button:focus {
   flex-direction: column;
 }
 
+.captcha-text {
+  display: none;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .footer_content {
   height: 300px;
   max-width: 1000px;

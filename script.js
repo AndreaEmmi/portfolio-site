@@ -44,3 +44,19 @@ links.forEach((link) => {
     });
   });
 });
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  document.getElementById("captcha-text").style.display = "none";
+
+  const captchaResponse = grecaptcha.getResponse();
+
+  if (!captchaResponse.length > 0) {
+    document.getElementById("captcha-text").style.display = "flex";
+    throw new Error("Captcha not complete");
+  }
+
+  form.submit();
+});
