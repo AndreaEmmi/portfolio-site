@@ -48,7 +48,7 @@ body {
   background-image: url("./images/back.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right;
+  background-position: left;
 }
 
 a {
@@ -74,7 +74,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
   z-index: 1;
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
