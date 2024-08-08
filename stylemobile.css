@@ -1,0 +1,182 @@
+@media (max-width: 844px) {
+  header .menu_burger {
+    width: 30px;
+    height: 0;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .logo {
+    width: 80px;
+    margin: 0 10px 0 0;
+  }
+
+  .title_name {
+    font-size: 21px;
+  }
+
+  .page p {
+    font-size: 14px;
+  }
+
+  .clickable {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .menu_burger::before,
+  header .menu_burger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  header .menu_burger::before {
+    transform: translateY(-5px);
+  }
+
+  header .menu_burger::after {
+    transform: translateY(5px);
+  }
+
+  header .menu_mobile.openbtn .menu_burger {
+    transform: translateX(-20px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  header .menu_mobile.openbtn .menu_burger::before {
+    transform: rotate(45deg) translate(15px, -15px);
+  }
+
+  header .menu_mobile.openbtn .menu_burger::after {
+    transform: rotate(-45deg) translate(15px, 15px);
+  }
+  header {
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
+  }
+
+  header.active {
+    height: 100vh;
+    background-color: #ffffff;
+  }
+
+  .menu {
+    display: none;
+    right: 0;
+    top: 70px;
+    position: absolute;
+    background-color: #ffffff;
+    display: flex;
+    height: 0vh;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .menu .contact_menu_button {
+    margin-top: 15px;
+  }
+
+  .menu.active {
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .menu a {
+    padding: 15px 5px;
+  }
+
+  .menu a div {
+    opacity: 0;
+    font-weight: 600;
+    font-size: 21px;
+    color: #000000;
+  }
+
+  .menu.active a div {
+    opacity: 1;
+  }
+
+  .page {
+    margin-top: 100px;
+    max-width: 990px;
+    height: max-content;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card h1 {
+    font-size: 24px;
+    text-align: center;
+    max-width: none;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .card {
+    margin-bottom: 40px;
+  }
+
+  .card p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .card .img-svg {
+    width: 150px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 350px;
+    margin: 0 10px;
+  }
+
+  .project-card h2 {
+    font-size: 21px;
+  }
+
+  .project-card img {
+    padding-right: 5px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+}
