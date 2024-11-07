@@ -28,11 +28,23 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.component {
+  opacity: 0;
+  transform: translateY(50px); /* Sposta il componente verso il basso */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* CSS per mostrare il componente con animazione */
+.component.show {
+  opacity: 1;
+  transform: translateY(0); /* Ripristina la posizione originale */
+}
+
 :root {
   --background: #ffffff;
   --text: #000000;
-  --startC: #5754f3;
-  --endC: #76dcf3;
+  --startC: #5e23ff;
+  --endC: #1495ff;
   --container: #f7f7f7;
 }
 
@@ -122,6 +134,58 @@ header {
   color: #000;
 }
 
+.reviews {
+  display: flex;
+  flex-direction: row;
+}
+
+.review_card {
+  margin: 10px;
+  max-width: 300px;
+}
+
+.review_stars {
+  display: flex;
+  justify-content: center;
+}
+
+.review_stars i {
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 800px;
+  color: #3e55ff;
+}
+
+.review_card div {
+  font-size: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.review_card p {
+  text-align: center;
+  font-style: italic;
+}
+
+.first-page {
+  display: flex;
+  height: 100vh;
+  width: 990px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.first-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.multiimg-container img {
+  width: 320px !important;
+}
+
 .page {
   display: flex;
   height: 100vh;
@@ -129,6 +193,20 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.page_review {
+  display: flex;
+  height: 80vh;
+  max-width: 990px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-h1 {
+  font-size: 52px;
+  color: var(--text);
 }
 
 .title {
@@ -139,6 +217,8 @@ header {
 .row {
   display: flex;
   flex-direction: row;
+  align-items: start;
+
   justify-content: space-between;
 }
 
@@ -152,7 +232,7 @@ header {
 }
 
 .card h1 {
-  font-size: 28px;
+  font-size: 22px;
   max-width: fit-content;
 }
 
@@ -162,7 +242,7 @@ spacer {
 
 .number-projects-made {
   border-radius: 40px;
-  width: 220px;
+  width: 240px;
   padding: 14px;
   background-image: linear-gradient(90deg, var(--startC), var(--endC));
   color: #fff;
@@ -183,7 +263,7 @@ spacer {
 
 .card p {
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .page p {
@@ -198,7 +278,7 @@ spacer {
 }
 
 .img-svg {
-  width: 200px;
+  width: 150px;
 }
 
 .projects {

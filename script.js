@@ -60,3 +60,29 @@ form.addEventListener("submit", (e) => {
 
   form.submit();
 });
+
+const components = document.querySelectorAll(".component");
+
+// Funzione per controllare se un componente è visibile
+function isComponentVisible(component) {
+  const componentTop = component.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  // Il componente è visibile se è sopra la parte inferiore della finestra
+  return componentTop < windowHeight;
+}
+
+// Funzione per gestire l'animazione dei componenti
+function handleComponentAnimation() {
+  components.forEach((component) => {
+    if (isComponentVisible(component)) {
+      component.classList.add("show");
+    }
+  });
+}
+
+// Aggiungi il listener per l'evento scroll
+window.addEventListener("scroll", handleComponentAnimation);
+
+// Chiamare la funzione iniziale in caso i componenti siano già visibili all'avvio
+handleComponentAnimation();

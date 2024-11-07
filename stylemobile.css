@@ -1,4 +1,51 @@
+@media (max-width: 1030px) {
+  .first-page {
+    width: fit-content;
+    max-width: 990px;
+  }
+}
+
 @media (max-width: 844px) {
+  .first-page {
+    margin-top: 180px;
+    height: auto;
+  }
+  .page_review {
+    height: 100vh;
+  }
+  .reviews {
+    flex-direction: column;
+  }
+
+  .review_card i {
+    font-size: 25px;
+  }
+
+  .review_card div {
+    font-size: 14px;
+  }
+
+  .review_card p {
+    font-size: 14px;
+  }
+
+  .first-title {
+    flex-direction: column-reverse;
+  }
+
+  .multiimg-container img {
+    margin-top: 40px;
+    width: fit-content !important;
+    max-width: 250px;
+  }
+
+  .title-h1 {
+    padding: 20px;
+    font-size: 35px;
+    text-align: center;
+    color: var(--text);
+  }
+
   header .menu_burger {
     width: 30px;
     height: 0;
@@ -122,11 +169,12 @@
   .row {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
   }
 
   .card h1 {
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     max-width: none;
   }
@@ -140,12 +188,12 @@
   }
 
   .card p {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
   }
 
   .card .img-svg {
-    width: 150px;
+    width: 120px;
   }
 
   .card:hover {
