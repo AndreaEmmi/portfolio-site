@@ -11,7 +11,7 @@
     height: auto;
   }
   .page_review {
-    height: 100vh;
+    height: fit-content;
   }
   .reviews {
     flex-direction: column;
